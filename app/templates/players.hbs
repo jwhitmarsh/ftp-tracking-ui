@@ -1,0 +1,26 @@
+<h1>Players</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Player Id</th>
+            <th>Firstname</th>
+            <th>Surname</th>
+            <th>Age</th>
+            <th>Wage</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each model as |player|}}
+            <tr>
+                <td>{{player.id}}</td>
+                <td>{{player.firstnames}}</td>
+                <td>{{player.surname}}</td>
+                <td>{{player.age}}</td>
+                <td>{{player.wage}}</td>
+                <td>{{player.rating}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
