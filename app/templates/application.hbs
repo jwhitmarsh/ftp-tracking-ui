@@ -1,42 +1,37 @@
 <div id="top-nav" class="navbar navbar-static-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">FTP Tracker</a>
-        </div>
-        <!--<div class="navbar-collapse collapse">-->
-        <!--<ul class="nav navbar-nav navbar-right">-->
-        <!--<li class="dropdown">-->
-        <!--<a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> Admin <span class="caret"></span></a>-->
-        <!--<ul id="g-account-menu" class="dropdown-menu" role="menu">-->
-        <!--<li><a href="#">My Profile</a></li>-->
-        <!--</ul>-->
-        <!--</li>-->
-        <!--<li><a href="#"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>-->
-        <!--</ul>-->
-        <!--</div>-->
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FTP Tracker</a>
     </div>
+    <!--<div class="navbar-collapse collapse">-->
+    <!--<ul class="nav navbar-nav navbar-right">-->
+    <!--<li class="dropdown">-->
+    <!--<a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> Admin <span class="caret"></span></a>-->
+    <!--<ul id="g-account-menu" class="dropdown-menu" role="menu">-->
+    <!--<li><a href="#">My Profile</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li><a href="#"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+  </div>
 </div>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
-            <ul>
-                {{#link-to 'players' tagName='li'}}
-                    <span>Players</span>
-                {{/link-to}}
-                <li>
-                    {{link-to 'details'}}
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-10">
-            {{outlet}}
-        </div>
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+        {{#link-to 'players' tagName='li'}}<a href="#">Players</a>{{/link-to}}
+        {{#link-to 'details' tagName='li'}}<a href="#">Details</a>{{/link-to}}
+      </ul>
     </div>
+    <div class="col-md-10">
+      {{outlet}}
+    </div>
+  </div>
 </div>
-
